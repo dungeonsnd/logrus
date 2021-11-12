@@ -124,5 +124,6 @@ func (f *JSONFormatter) Format(entry *Entry) ([]byte, error) {
 		return nil, fmt.Errorf("failed to marshal fields to JSON, %w", err)
 	}
 
+	b.WriteString("\n")
 	return b.Bytes(), nil
 }
